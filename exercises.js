@@ -1,21 +1,21 @@
 /*
 If statements - Evaluates (or checks) a condition. If the condition is true, any statements in the subsequent code block are executed
 */
-var today = new Date();
+/*var today = new Date();
 
 if(today === "Friday"){
   return "Let's Party!";
-};
+}
 
 /*
 If/else statements = Evaluates (or checks) a condition. If the condition is true, the first code block is executed. If the condition is false, the second code block is executed instead.
 */
 
-if(today === "Friday"){
+/*if(today === "Friday"){
   return "Let's Party!";
 }else{
   return "Get back to coding!";
-};
+}*/
 
 
 /*
@@ -29,6 +29,14 @@ if(today === "Friday"){
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
 
+function canVote(age){
+  if(age >= 18){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log (canVote(19));
 
 /*
  * #2
@@ -41,6 +49,14 @@ if(today === "Friday"){
  * The function will return the message: "Login Success!", if the string passed into the function is "test1234"
  * Console.log your result.
 */
+function login(password){
+  if(password === "test1234"){
+    return "Login Successful!";
+  }else{
+    return "Password Incorrect!";
+  }
+}
+console.log (login("lkhfsidf"));
 
 
 /*
@@ -55,7 +71,14 @@ if(today === "Friday"){
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
+function isGreaterThan(first, second){
+  if(first > second){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log (isGreaterThan(7, 9));
 
 /*
  * #4
@@ -68,7 +91,14 @@ if(today === "Friday"){
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
+function mustBeTrue(boo) {
+  if(boo === true){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log (mustBeTrue(false));
 
 /*
  * #5
@@ -82,6 +112,14 @@ if(today === "Friday"){
  * Console.log your result.
 */
 
+function bigBird(word){
+  if (word.length === 3){
+    return "Word to Big Bird!";
+  }else{
+    return false;
+  }
+}
+console.log (bigBird("Yay"));
 
 /*
  * #6
@@ -92,10 +130,17 @@ if(today === "Friday"){
  *  @param Datatype: String `second`
  *  @return Datatype: String
  *
- * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
+ * If the strings are equal, the function will return the message "You lo;ok mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
+function isEqual(first, second){
+  if(first === second){
+    return "You look mahvelous!";
+  }else{
+    return "I don't know who you are anymore.";
+  }
+}
+console.log (isEqual("Me", "Me"));
 
 /*
  * #7
@@ -110,6 +155,14 @@ if(today === "Friday"){
  * Console.log your result.
 */
 
+function notEqual(first, second){
+  if(first !== second){
+    return "Opposites do attract.";
+  }else{
+    return "Cause it's like you're my mirror.";
+  }
+}
+console.log (notEqual("first", "first"));
 
 /*
  * #8
@@ -123,6 +176,14 @@ if(today === "Friday"){
  * Console.log your result.
 */ 
 
+function spareChange(money){
+  if(money > 100){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(spareChange(90));
 
 /*
  * #9
@@ -138,6 +199,15 @@ if(today === "Friday"){
  * Console.log your result.
 */ 
 
+function dirty30(one, two, three){
+  var sum = one + two + three;
+  if(sum > 30){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log (dirty30(10, 9, 10));
 
 /*
  * #10
@@ -151,6 +221,14 @@ if(today === "Friday"){
  * Console.log your result.
 */ 
 
+function evenStevens(num){
+  if(num%2 == 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log (evenStevens(19));
 
 /*
  * #11
@@ -165,6 +243,14 @@ if(today === "Friday"){
  * Console.log your result.
 */ 
 
+function daClub(cover, age){
+  if(cover >= 21 && age >= 21){
+    return "Welcome to the Legends Lounge.";
+  }else{
+    return "Chuck E Cheese is across the street.";
+  }
+}
+console.log (daClub(21, 21));
 
 /*
  * #12
@@ -179,6 +265,14 @@ if(today === "Friday"){
  * Console.log your result.
 */ 
 
+function graduation(credits, thesis){
+  if(credits >= 120 || thesis === true){
+    return "Congratulations on a job well done.";
+  }else{
+    return "See you in summer school.";
+  }
+}
+console.log (graduation(120, 114));
 
 /*
  * #13
@@ -192,6 +286,16 @@ if(today === "Friday"){
  * Console.log your result.
 */ 
 
+function moneyTrain(speed){
+  if(speed < 50){
+    return "You are riding Honolulu's Rail.";
+  }else if(speed <100){
+    return "You are riding an Amtrak."; 
+  }else if(speed >= 100){
+  return "Now you ballin' in the Shinkansen!";
+}
+}
+console.log (moneyTrain(34));
 
 /*
  * #14
@@ -206,6 +310,21 @@ if(today === "Friday"){
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+var budget = 100;
+var doughnutPrice = 5;
+var doughnutBought= 0;
+function buyDoughnut(){
+  if (budget >= doughnutPrice){
+    budget = budget - doughnutPrice;
+    doughnutBought++;
+  }
+}
+buyDoughnut();
+console.log (budget);
+console.log (doughnutBought);
+buyDoughnut();
+console.log (budget);
+console.log (doughnutBought);
 
 
 /*
@@ -234,14 +353,26 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
+var players = ["Player: 1", "Player: 2", "Player: 3", "Player: 4", "Player: 5", "Player: 6"];
 
+function playersList(players){
+for (var i = 0; i < players.length; i++) {
+  console.log (players[i]);
+}
+}
+playersList(players);
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
-
+function foodList(food){
+  for (var i = 0; i < myFavFoods.length; i++){
+    console.log (myFavFoods[i]);
+  }
+}
+foodList(myFavFoods);
 
 /*
  * #17
@@ -257,8 +388,16 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
-
-
+var  numArray = [2, 4, 6, 8, 10];
+var total = 0;
+function sumItUp(arr){
+  for(var i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+    total += arr[i];
+  }
+  return  total;
+}
+console.log ("sum it up " + sumItUp(numArray));
 /*
  * #18
  * Function - allStars
@@ -271,10 +410,21 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log both the east and west arrays.
 */ 
 
-  var players = ["LeBron", "Linsanity", "Kawhi", "Kobe", "Yao Ming", "Bird", "Jordan"];
+  var players = ["LeBron", "Linsanity", "Kawhi", "Kobe", "Yao Ming", "Bird", "Jordan"]; 
   var east = [];
   var west = [];
-
+  function allStars(ballers){
+    for(var i = 0; i < ballers.length; i++){
+      if(i % 2 === 0){
+        east.push(ballers[i]);
+      }else{
+        west.push(ballers[i]);
+      }
+    }
+  }
+allStars(players);
+console.log (east);
+console.log (west);
 /*
  * #19
  * Function - subways
@@ -288,7 +438,16 @@ for (var i = 0; i<toyotaModels.length; i++){
 */ 
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
-
+function subways(special){
+  for(var i = 0; i < special.length; i++){
+    if(i % 2 === 1){
+    special.splice(i, 1, "Classic Tuna");
+    }
+  }
+  return special;
+}
+subways(subOftheDay);
+console.log(subOftheDay);
 
 /*
 Final Boss
@@ -302,8 +461,19 @@ Final Boss
  *  The function will loop through the string value and put all the letters into an array, except for the letter "A" and "a". We don't want no stinking "A" or "a" in our array. Test your function with the `phrase` below!
 */
 
-  var phrase = "An apple a day keeps Alice feeling awesome!"
-  
+  var phrase = "An apple a day keeps Alice feeling awesome!";
+  function removeLetter(str){
+    var newArray = [];
+    for(var i=0; i<str.length; i++){
+      if(str[i] !== "a" && str[i] !== "A"){
+        newArray.push(str[i]);
+      }
+    }
+    console.log(newArray);
+    return newArray;
+
+  }
+removeLetter(phrase);
 
 
 
